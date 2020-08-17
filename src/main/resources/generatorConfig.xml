@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="MysqlTables" targetRuntime="MyBatis3">
+        <!-- 生成mysql带有分页的sql的插件  这个可以自己写，-->
+        <plugin type="com.example.mybatis.mybatisdemo.config.MysqlPagePlugin"/>
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <!-- 自定义的注释规则，继承 DefaultCommentGenerator 重写 一些方法 -->
+        <!--        <commentGenerator type="com.example.mybatis.mybatisdemo.config.NewBatisGenerator">-->
+        <!--            &lt;!&ndash; 是否去除自动生成日期的注释 true：是 ： false:否 &ndash;&gt;-->
+        <!--            <property name="suppressDate" value="false"/>-->
+        <!--            &lt;!&ndash; 是否去除所有自动生成的注释 true：是 ： false:否 &ndash;&gt;-->
+        <!--            <property name="suppressAllComments" value="false"/>-->
+        <!--        </commentGenerator>-->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" connectionURL="jdbc:mysql://192.168.0.103:3306/mybatis"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+        <!--生成entity类存放位置-->
+        <javaModelGenerator targetPackage="com.example.mybatis.mybatisdemo.model"
+                            targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!--生成映射文件存放位置-->
+        <sqlMapGenerator targetPackage="mapper"
+                         targetProject="./src/main/resources" >
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!--生成Dao类存放位置-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.mybatis.mybatisdemo.dao"
+                             targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <table tableName="department" domainObjectName="DepartmentDO">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="employee" domainObjectName="EmployeeDO">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+    </context>
+</generatorConfiguration>
