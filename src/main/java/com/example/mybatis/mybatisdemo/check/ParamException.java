@@ -1,9 +1,12 @@
 package com.example.mybatis.mybatisdemo.check;
 
+import lombok.Data;
+
 /**
  * @author wangrenzhe
  * @date 2020/8/6 17:16
  */
+@Data
 public class ParamException extends RuntimeException {
     private static final long serialVersionUID = 3587817360301590447L;
     private String code;

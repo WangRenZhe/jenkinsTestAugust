@@ -16,8 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -29,6 +31,7 @@ import java.util.List;
 @SpringBootApplication
 @Slf4j
 @MapperScan("com.example.mybatis.mybatisdemo.dao")
+@ComponentScan("com.example.mybatis")
 @EnableCaching
 @EnableAsync
 @EnableScheduling
@@ -50,8 +53,8 @@ public class MybatisdemoApplication implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         // generateArtifacts();
         // insertDepartment();
-        // selectDepartmentTest();
-        redisTest();
+         selectDepartmentTest();
+        //redisTest();
     }
 
     private void generateArtifacts() throws Exception {
@@ -114,6 +117,8 @@ public class MybatisdemoApplication implements ApplicationRunner {
         redisTemplate.opsForValue().set("deparment1", departmentDOList.get(0));*/
 
         // Object deparment1 = redisTemplate.opsForValue().get("deparment1");
+
+
         DepartmentDO departmentDO = new DepartmentDO();
         departmentDO.setDepartmentName("ceshi");
 

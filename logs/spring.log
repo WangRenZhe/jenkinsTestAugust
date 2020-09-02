@@ -1,0 +1,22 @@
+2020-09-02 18:22:23.031  INFO 18241 --- [main] c.e.m.m.MybatisdemoApplicationTests      : Starting MybatisdemoApplicationTests on Wang.local with PID 18241 (started by vincentwang in /Users/vincentwang/code/mybatisdemo)
+2020-09-02 18:22:23.032  INFO 18241 --- [main] c.e.m.m.MybatisdemoApplicationTests      : The following profiles are active: dev
+2020-09-02 18:22:23.770  INFO 18241 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-09-02 18:22:23.771  INFO 18241 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-09-02 18:22:23.802  INFO 18241 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 0 JDBC repository interfaces.
+2020-09-02 18:22:23.822  INFO 18241 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-09-02 18:22:23.824  INFO 18241 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-09-02 18:22:23.845  INFO 18241 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2020-09-02 18:22:26.250  INFO 18241 --- [main] org.redisson.Version                     : Redisson 3.13.1
+2020-09-02 18:22:26.649  INFO 18241 --- [redisson-netty-4-10] o.r.c.pool.MasterPubSubConnectionPool    : 1 connections initialized for /192.168.0.103:6379
+2020-09-02 18:22:26.665  INFO 18241 --- [redisson-netty-4-7] o.r.c.pool.MasterConnectionPool          : 50 connections initialized for /192.168.0.103:6379
+2020-09-02 18:22:27.294  INFO 18241 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-02 18:22:28.653  INFO 18241 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-09-02 18:22:28.904  INFO 18241 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-09-02 18:22:28.965  INFO 18241 --- [main] c.e.m.m.MybatisdemoApplicationTests      : Started MybatisdemoApplicationTests in 6.519 seconds (JVM running for 8.018)
+2020-09-02 18:22:29.610  INFO 18241 --- [main] c.e.m.m.MybatisdemoApplicationTests      : info-info
+2020-09-02 18:22:29.610  WARN 18241 --- [main] c.e.m.m.MybatisdemoApplicationTests      : warn-warn
+2020-09-02 18:22:29.610 ERROR 18241 --- [main] c.e.m.m.MybatisdemoApplicationTests      : error-error
+2020-09-02 18:22:29.628  INFO 18241 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-09-02 18:22:29.629  INFO 18241 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-02 18:22:29.644  INFO 18241 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2020-09-02 18:22:29.657  INFO 18241 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

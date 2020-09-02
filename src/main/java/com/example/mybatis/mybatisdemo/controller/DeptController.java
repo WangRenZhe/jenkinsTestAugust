@@ -2,6 +2,7 @@ package com.example.mybatis.mybatisdemo.controller;
 
 import com.example.mybatis.mybatisdemo.model.DepartmentDO;
 import com.example.mybatis.mybatisdemo.service.DepartmentService;
+import com.example.mybatis.mybatisdemo.trycatch.TryCatch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +20,7 @@ public class DeptController {
     private DepartmentService departmentService;
 
     @GetMapping("/dept/{id}")
+    @TryCatch
     public DepartmentDO getDept(@PathVariable Integer id) {
 
         return departmentService.getById(id);
@@ -30,6 +32,7 @@ public class DeptController {
         return departmentService.getDepByName(name);
     }
 
+    @TryCatch
     @GetMapping("/deptUpdate/{id}")
     public DepartmentDO updateDepById(@PathVariable Integer id) {
         return departmentService.updateById(id);
